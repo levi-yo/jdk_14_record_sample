@@ -6,7 +6,6 @@ import reactor.core.publisher.Mono;
 
 @Service
 public class SampleRecordService {
-
     public Mono<SampleRecord> sampleRecordMono(SampleRecord sampleRecord) {
         return Mono.just(sampleRecord);
     }

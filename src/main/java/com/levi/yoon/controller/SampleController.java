@@ -9,9 +9,9 @@ import reactor.core.publisher.Mono;
 
 @RestController
 public record SampleController(SampleRecordService sampleRecordService) {
-
     @PostMapping("/")
     public Mono<SampleRecord> sampleRecord(@RequestBody SampleRecord sampleRecord) {
+        System.out.println(sampleRecord.getInfo());
         return sampleRecordService.sampleRecordMono(sampleRecord);
     }
 }
